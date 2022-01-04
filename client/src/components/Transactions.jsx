@@ -59,7 +59,7 @@ const TransactionCard = ({
 };
 
 const Transactions = () => {
-  const { currentAccount } = useContext(TransactionsContext);
+  const { currentAccount, transactions } = useContext(TransactionsContext);
   return (
     <div className='flex w-full justify-center items-center 2xl:px20 gradient-bg-transactions'>
       <div className='flex flex-col md:p-12 px-4'>
@@ -73,7 +73,7 @@ const Transactions = () => {
           </h3>
         )}
         <div className='flex flex-wrap justify-center items-center mt-10'>
-          {dummyData.reverse().map((transaction, i) => (
+          {transactions.reverse().map((transaction, i) => (
             <TransactionCard key={i} {...transaction} />
           ))}
         </div>

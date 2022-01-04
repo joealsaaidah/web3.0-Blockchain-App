@@ -29,9 +29,8 @@ const Welcome = () => {
     formData,
     sendTransaction,
     handleChange,
+    isLoading,
   } = useContext(TransactionsContext);
-
-  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e) => {
     const { addressTo, amount, keyword, message } = formData;
